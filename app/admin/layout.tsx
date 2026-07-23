@@ -1,4 +1,3 @@
-import { redirect } from "nextredirect"; // Will use standard redirect from next/navigation
 import { redirect as nextRedirect } from "next/navigation";
 import Link from "next/link";
 import { getAdminSession } from "@/lib/auth";
