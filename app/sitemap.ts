@@ -6,7 +6,6 @@ import BlogPost from '@/models/BlogPost'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.dctimbers.co.uk'
 
-  // Static routes
   const routes = ['', '/products', '/contact', '/blog'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -15,7 +14,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   try {
-    await connectDB()
+    const conn = await connectDB()
+    if (!conn) return routes // Return only static routes if DB is not connected during build
 
     // Products & Categories
     const products = await Product.find({}, 'categorySlug slug updatedAt').lean()
@@ -45,7 +45,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
 
     return [...routes, ...categoryRoutes, ...productRoutes, ...blogRoutes]
-  } catch {
+  } catch (e) {
+    console.error("[Sitemap] DB error:", e)
     return routes
   }
 }

@@ -5,29 +5,45 @@ import BlogPost from "@/models/BlogPost";
 
 export const metadata: Metadata = {
   title: "Timber & Fencing Knowledge Base & Blog | DCtimbers",
-  description: "Guides, trade advice, installation tips, and timber maintenance updates from the DCtimbers team.",
+  description:
+    "Guides, trade advice, installation tips, and timber maintenance updates from the DCtimbers team.",
 };
 
 export const revalidate = 3600;
 
 export default async function BlogPage() {
-  await connectDB();
-  const rawPosts = await BlogPost.find({ published: true })
-    .sort({ publishedAt: -1, createdAt: -1 })
-    .lean();
-  const posts = JSON.parse(JSON.stringify(rawPosts));
+  let posts: any[] = [];
+
+  try {
+    const conn = await connectDB();
+    if (conn) {
+      const raw = await BlogPost.find({ published: true })
+        .sort({ publishedAt: -1, createdAt: -1 })
+        .lean();
+      posts = JSON.parse(JSON.stringify(raw));
+    }
+  } catch (e) {
+    console.error("[BlogPage] DB error:", e);
+  }
 
   return (
     <div className="py-12 px-8 max-w-7xl mx-auto w-full">
       <div className="mb-12">
         <h1
           className="text-5xl font-black uppercase mb-3"
-          style={{ fontFamily: "var(--font-headline)", color: "var(--color-primary)" }}
+          style={{
+            fontFamily: "var(--font-headline)",
+            color: "var(--color-primary)",
+          }}
         >
           Timber Journal &amp; Trade Advice
         </h1>
-        <p className="text-base opacity-80" style={{ color: "var(--color-on-surface-variant)" }}>
-          Industry guides, timber treatments, fencing installations, and yard news.
+        <p
+          className="text-base opacity-80"
+          style={{ color: "var(--color-on-surface-variant)" }}
+        >
+          Industry guides, timber treatments, fencing installations, and yard
+          news.
         </p>
       </div>
 
@@ -39,13 +55,21 @@ export default async function BlogPage() {
             borderColor: "var(--color-primary)",
           }}
         >
-          <span className="material-symbols-outlined text-5xl mb-2" style={{ color: "var(--color-secondary)" }}>
+          <span
+            className="material-symbols-outlined text-5xl mb-2 block"
+            style={{ color: "var(--color-secondary)" }}
+          >
             article
           </span>
-          <h2 className="text-2xl font-bold uppercase mb-1" style={{ fontFamily: "var(--font-headline)" }}>
+          <h2
+            className="text-2xl font-bold uppercase mb-1"
+            style={{ fontFamily: "var(--font-headline)" }}
+          >
             No Articles Published Yet
           </h2>
-          <p className="text-sm opacity-70">Check back soon for news and trade guides from our team.</p>
+          <p className="text-sm opacity-70">
+            Check back soon for news and trade guides from our team.
+          </p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -63,7 +87,10 @@ export default async function BlogPage() {
                 className="h-48 border-b-2 blueprint-grid flex items-center justify-center relative"
                 style={{ borderColor: "var(--color-primary)" }}
               >
-                <span className="material-symbols-outlined text-6xl opacity-20" style={{ color: "var(--color-primary)" }}>
+                <span
+                  className="material-symbols-outlined text-6xl opacity-20"
+                  style={{ color: "var(--color-primary)" }}
+                >
                   newspaper
                 </span>
                 <div
@@ -78,17 +105,28 @@ export default async function BlogPage() {
               </div>
 
               <div className="p-6 flex-1 flex flex-col gap-3">
-                <span className="text-xs opacity-60 uppercase" style={{ fontFamily: "var(--font-mono)" }}>
-                  {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString("en-GB") : "Recent"}
+                <span
+                  className="text-xs opacity-60 uppercase"
+                  style={{ fontFamily: "var(--font-mono)" }}
+                >
+                  {post.publishedAt
+                    ? new Date(post.publishedAt).toLocaleDateString("en-GB")
+                    : "Recent"}
                 </span>
                 <h2
                   className="text-2xl font-black uppercase group-hover:underline leading-tight"
-                  style={{ fontFamily: "var(--font-headline)", color: "var(--color-primary)" }}
+                  style={{
+                    fontFamily: "var(--font-headline)",
+                    color: "var(--color-primary)",
+                  }}
                 >
                   {post.title}
                 </h2>
                 {post.excerpt && (
-                  <p className="text-sm opacity-80 line-clamp-3 leading-relaxed" style={{ color: "var(--color-on-surface-variant)" }}>
+                  <p
+                    className="text-sm opacity-80 line-clamp-3 leading-relaxed"
+                    style={{ color: "var(--color-on-surface-variant)" }}
+                  >
                     {post.excerpt}
                   </p>
                 )}
@@ -104,7 +142,9 @@ export default async function BlogPage() {
                 }}
               >
                 <span>Read Full Article</span>
-                <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                <span className="material-symbols-outlined text-sm">
+                  arrow_forward
+                </span>
               </div>
             </Link>
           ))}
