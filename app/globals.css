@@ -1,26 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Fira+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ── DCtimbers Design Tokens (Tailwind v4 @theme) ──────────────────────────── */
+@theme {
+  /* Colors */
+  --color-primary: #322214;
+  --color-primary-container: #4a3728;
+  --color-primary-fixed: #fbddc7;
+  --color-primary-fixed-dim: #dec1ac;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #bba08c;
+  --color-on-primary-fixed: #28180b;
+  --color-on-primary-fixed-variant: #574333;
+
+  --color-secondary: #7e5630;
+  --color-secondary-container: #fdc799;
+  --color-secondary-fixed: #ffdcc0;
+  --color-secondary-fixed-dim: #f1bc8e;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #78512c;
+  --color-on-secondary-fixed: #2d1600;
+  --color-on-secondary-fixed-variant: #633f1b;
+
+  --color-tertiary: #1c2912;
+  --color-tertiary-container: #313f26;
+  --color-tertiary-fixed: #d7e8c5;
+  --color-tertiary-fixed-dim: #bbccaa;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #9aaa8b;
+  --color-on-tertiary-fixed: #121f09;
+  --color-on-tertiary-fixed-variant: #3d4b31;
+
+  --color-surface: #fff8f5;
+  --color-surface-dim: #dfd9d6;
+  --color-surface-bright: #fff8f5;
+  --color-surface-variant: #e8e1de;
+  --color-surface-tint: #705a49;
+  --color-surface-container: #f3ecea;
+  --color-surface-container-low: #f9f2ef;
+  --color-surface-container-high: #eee7e4;
+  --color-surface-container-highest: #e8e1de;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #1e1b1a;
+  --color-on-surface-variant: #4e453e;
+  --color-on-background: #1e1b1a;
+  --color-background: #fff8f5;
+
+  --color-outline: #80756d;
+  --color-outline-variant: #d2c4bb;
+  --color-inverse-surface: #33302e;
+  --color-inverse-on-surface: #f6efec;
+  --color-inverse-primary: #dec1ac;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  --color-warning-orange: #D97A2B;
+
+  /* Fonts */
+  --font-headline: "Barlow Condensed", sans-serif;
+  --font-body: "Fira Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Border radius — sharp catalogue feel */
+  --radius: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  /* Spacing tokens */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 48px;
+  --spacing-base: 4px;
+  --spacing-gutter: 16px;
+  --spacing-margin-desktop: 32px;
+  --spacing-margin-mobile: 16px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ── Base Styles ─────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+/* ── Typography helpers ──────────────────────────────────────────────────────── */
+.font-headline { font-family: var(--font-headline); }
+.font-body     { font-family: var(--font-body); }
+.font-mono     { font-family: var(--font-mono); }
+
+/* ── Signature Motifs ────────────────────────────────────────────────────────── */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(128, 117, 109, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(128, 117, 109, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.notched-tag {
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+}
+
+.cut-list-border {
+  border: 1px solid rgba(50, 34, 20, 0.2);
+}
+
+/* Hard drop-shadow buttons */
+.shadow-hard {
+  box-shadow: 4px 4px 0px 0px rgba(50, 34, 20, 1);
+}
+.shadow-hard-lg {
+  box-shadow: 8px 8px 0px 0px rgba(50, 34, 20, 1);
+}
+
+/* ── Material Symbols ────────────────────────────────────────────────────────── */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-size: 24px;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
 }

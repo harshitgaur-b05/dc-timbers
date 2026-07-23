@@ -1,0 +1,1598 @@
+{
+  "company": {
+    "name": "Main Line Timber Ltd",
+    "website": "https://www.mainlinetimber.co.uk/",
+    "contacts": [
+      {
+        "depot": "Woodford Halse",
+        "address": "Old Station Yard, Station Rd, Woodford Halse, Northamptonshire, NN11 3RB",
+        "phone": "01327 262124",
+        "email": "sales@mainlinetimber.co.uk"
+      },
+      {
+        "depot": "Marton",
+        "address": "The Old Garage, Coventry Rd, Marton, Warwickshire, CV23 9RH",
+        "phone": "01926 633739",
+        "email": "marton@mainlinetimber.co.uk"
+      },
+      {
+        "depot": "Warwick",
+        "address": "Unit 1, Park Farm, Banbury Road, Warwick, CV34 6ST",
+        "phone": "01926 353199",
+        "email": "warwick@mainlinetimber.co.uk"
+      }
+    ]
+  },
+  "scrape_metadata": {
+    "created_utc": "2026-07-22T17:16:12Z",
+    "source_documents": [
+      "main-line-timber-product-catalogue-2026.pdf",
+      "https://www.mainlinetimber.co.uk/"
+    ],
+    "scope": "Catalogue-level hierarchy plus public price snippets found via web results",
+    "cost_note": "Many catalogue items do not show prices in the PDF. Exact costs are included only where a public webpage/search snippet explicitly provided a price.",
+    "recommended_depth": "Full product hierarchy with variants: category > subcategory > product > variant/option. Include cost, dimensions, description, treatment, stock status, unit, URL, and source reference. Do not scrape checkout, account, basket, reviews beyond public product metadata, or any personal data."
+  },
+  "categories": [
+    {
+      "category": "Gates",
+      "notes": null,
+      "source_refs": [
+        "turn2search2",
+        "turn2search43",
+        "turn2search30",
+        "turn2search38",
+        "turn2search28"
+      ],
+      "subcategories": [
+        {
+          "subcategory": "Pedestrian Gates",
+          "source_refs": [
+            "turn2search2",
+            "turn2search43",
+            "turn2search44",
+            "turn2search45",
+            "turn2search48"
+          ],
+          "products": [
+            {
+              "product_name": "Eco Woodford Gates",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2",
+                "turn2search45"
+              ],
+              "variants": [
+                {
+                  "width": "0.9m",
+                  "height": "1.8m",
+                  "cost_gbp": 96.31,
+                  "unit": "Each",
+                  "price_basis": "From price from related public product snippet"
+                }
+              ]
+            },
+            {
+              "product_name": "Woodford Gates",
+              "description": null,
+              "url": null,
+              "notes": "Pressure treated with Tanalith E Treatment. Made-to-measure sizes offered in this gate range.",
+              "source_refs": [
+                "turn2search2"
+              ],
+              "variants": [
+                {
+                  "width": "0.9m",
+                  "height": "0.9m",
+                  "unit": "Each"
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.2m",
+                  "unit": "Each"
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.5m",
+                  "unit": "Each"
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.8m",
+                  "unit": "Each"
+                },
+                {
+                  "width": "1m",
+                  "height": "1.8m",
+                  "unit": "Each"
+                },
+                {
+                  "width": "1.2m",
+                  "height": "1.8m",
+                  "unit": "Each"
+                }
+              ]
+            },
+            {
+              "product_name": "Harbury Gates",
+              "description": "Fully framed, ledged and braced gates built using planed 45mm x 95mm timber; smooth tongue and groove boarding from top to bottom; manufactured in-house; pressure treated green.",
+              "url": "https://mainlinetimber.co.uk/products/289/harbury-gates",
+              "notes": "Sold as single gates; order quantity 2 for a pair. Made-to-measure available by contacting supplier.",
+              "source_refs": [
+                "turn2search2",
+                "turn2search44"
+              ],
+              "variants": [
+                {
+                  "width": "0.9m",
+                  "height": "0.9m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 152.76,
+                  "unit": "Each",
+                  "vat_included": true
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.2m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 162.35,
+                  "unit": "Each",
+                  "vat_included": true
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.5m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 175.94,
+                  "unit": "Each",
+                  "vat_included": true
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.8m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 186.95,
+                  "unit": "Each",
+                  "vat_included": true
+                },
+                {
+                  "width": "1m",
+                  "height": "1.8m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 205.66,
+                  "unit": "Each",
+                  "vat_included": true
+                },
+                {
+                  "width": "1.2m",
+                  "height": "1.8m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 224.35,
+                  "unit": "Each",
+                  "vat_included": true
+                }
+              ]
+            },
+            {
+              "product_name": "Arched Harbury Gates",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2"
+              ],
+              "variants": [
+                {
+                  "width": "0.9m",
+                  "height": "1.8m",
+                  "unit": "Each"
+                }
+              ]
+            },
+            {
+              "product_name": "Domed Harbury Gates",
+              "description": "Fully framed, ledged and braced gates built using planed 45mm x 95mm timber; smooth tongue and groove boards with a built-in domed top; manufactured in-house.",
+              "url": "https://mainlinetimber.co.uk/products/292/search.asp",
+              "notes": "Sold as single gates; order quantity 2 for a pair. Made-to-measure available by contacting supplier.",
+              "source_refs": [
+                "turn2search2",
+                "turn2search45"
+              ],
+              "variants": [
+                {
+                  "width": "0.9m",
+                  "height": "1.8m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 205.4,
+                  "unit": "Each",
+                  "vat_included": true
+                }
+              ]
+            },
+            {
+              "product_name": "Marton Gates",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2"
+              ],
+              "variants": [
+                {
+                  "width": "0.9m",
+                  "height": "0.9m",
+                  "unit": "Each"
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.05m",
+                  "unit": "Each"
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.2m",
+                  "unit": "Each"
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.8m",
+                  "unit": "Each"
+                }
+              ]
+            },
+            {
+              "product_name": "Domed Marton Gates",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2"
+              ],
+              "variants": [
+                {
+                  "width": "0.9m",
+                  "height": "1.8m",
+                  "unit": "Each"
+                }
+              ]
+            },
+            {
+              "product_name": "Eydon Gates",
+              "description": "Fully framed, ledged and braced gates built using softwood planed 45mm x 95mm timber; smooth tongue and groove lower section with decorative open carsilated top; manufactured in-house; pressure treated green.",
+              "url": "https://mainlinetimber.co.uk/products/302/eydon-gates",
+              "notes": null,
+              "source_refs": [
+                "turn2search2",
+                "turn2search48"
+              ],
+              "variants": [
+                {
+                  "width": "0.9m",
+                  "height": "0.9m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 178.52,
+                  "unit": "Each",
+                  "vat_included": true
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.05m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 183.48,
+                  "unit": "Each",
+                  "vat_included": true
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.2m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 192.85,
+                  "unit": "Each",
+                  "vat_included": true
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.5m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 202.48,
+                  "unit": "Each",
+                  "vat_included": true
+                },
+                {
+                  "width": "0.9m",
+                  "height": "1.8m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 212.62,
+                  "unit": "Each",
+                  "vat_included": true
+                }
+              ]
+            },
+            {
+              "product_name": "Single Slatted Gate",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2"
+              ],
+              "variants": [
+                {
+                  "width": "0.9m",
+                  "height": "1.8m",
+                  "unit": "Each"
+                }
+              ]
+            },
+            {
+              "product_name": "Arched Lattice Top Gate",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search43",
+                "turn2search2"
+              ],
+              "variants": [
+                {
+                  "width": "0.9m",
+                  "height": "1.8m",
+                  "unit": "Each"
+                }
+              ]
+            },
+            {
+              "product_name": "Horizontal Lattice Top Gate",
+              "description": null,
+              "url": null,
+              "notes": "Listed on website category; detailed variants not visible in retrieved snippets.",
+              "source_refs": [
+                "turn2search43"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "Square Horizontal Gate",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search43",
+                "turn2search2"
+              ],
+              "variants": [
+                {
+                  "width": "0.9m",
+                  "height": "1.8m",
+                  "unit": "Each"
+                }
+              ]
+            },
+            {
+              "product_name": "Superior Double Slatted Gate",
+              "description": null,
+              "url": null,
+              "notes": "Listed on website category; detailed variants not visible in retrieved snippets.",
+              "source_refs": [
+                "turn2search43"
+              ],
+              "variants": []
+            }
+          ]
+        },
+        {
+          "subcategory": "Driveway Gates",
+          "source_refs": [
+            "turn2search2",
+            "turn2search30",
+            "turn2search46",
+            "turn2search47"
+          ],
+          "products": [
+            {
+              "product_name": "Elite Woodford Gates",
+              "description": null,
+              "url": null,
+              "notes": "Pressure treated with Tanalith E Treatment.",
+              "source_refs": [
+                "turn2search2",
+                "turn2search30"
+              ],
+              "variants": [
+                {
+                  "size": "Made to measure"
+                }
+              ]
+            },
+            {
+              "product_name": "Elite Harbury Gates",
+              "description": "Scandinavia Redwood fully framed, ledged and braced heavy duty gates built using planed 67mm x 95mm timber; smooth tongue and groove boards from top to bottom; manufactured in-house; pressure treated green.",
+              "url": "https://mainlinetimber.co.uk/products/250/elite-harbury-gates",
+              "notes": "Stock and made-to-measure gates in this style take 2-3 weeks to be manufactured according to public product snippet.",
+              "source_refs": [
+                "turn2search2",
+                "turn2search46",
+                "turn2search47"
+              ],
+              "variants": [
+                {
+                  "size": "Made to measure",
+                  "cost_gbp": 402.62,
+                  "unit": "Each",
+                  "price_basis": "From price from related snippet",
+                  "vat_included": true
+                }
+              ]
+            },
+            {
+              "product_name": "Grandborough Gates",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2",
+                "turn2search47"
+              ],
+              "variants": [
+                {
+                  "size": "Made to measure",
+                  "option": "Raise at middle or end",
+                  "cost_gbp": 591.35,
+                  "unit": "Each",
+                  "price_basis": "From price from related snippet"
+                }
+              ]
+            },
+            {
+              "product_name": "Elite Grandborough Gates",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2",
+                "turn2search47"
+              ],
+              "variants": [
+                {
+                  "size": "Made to measure",
+                  "option": "Raise at middle or end",
+                  "cost_gbp": 739.19,
+                  "unit": "Each",
+                  "price_basis": "From price from related snippet"
+                }
+              ]
+            },
+            {
+              "product_name": "Elite Eydon Gates",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2",
+                "turn2search47"
+              ],
+              "variants": [
+                {
+                  "size": "Made to measure",
+                  "cost_gbp": 322.02,
+                  "unit": "Each",
+                  "price_basis": "From price from related snippet"
+                }
+              ]
+            },
+            {
+              "product_name": "Dipped Elite Eydon Gates",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2",
+                "turn2search30"
+              ],
+              "variants": [
+                {
+                  "size": "Made to measure"
+                }
+              ]
+            },
+            {
+              "product_name": "Elite Marton Gate",
+              "description": "Scandinavia Redwood fully framed, ledged and braced heavy duty gates built using planed 65mm x 95mm timber; constructed using straight pales throughout; manufactured in-house; pressure treated green.",
+              "url": "https://mainlinetimber.co.uk/products/252/search.asp",
+              "notes": "Made-to-measure sizes offered; stock and made-to-measure style takes 2-3 weeks according to public product snippet.",
+              "source_refs": [
+                "turn2search2",
+                "turn2search47"
+              ],
+              "variants": [
+                {
+                  "width": "1.8m",
+                  "height": "1.2m",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 247.18,
+                  "unit": "Each",
+                  "vat_included": true
+                }
+              ]
+            },
+            {
+              "product_name": "Dipped Elite Marton Gates",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2",
+                "turn2search30"
+              ],
+              "variants": [
+                {
+                  "size": "Made to measure"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subcategory": "Field Gates",
+          "source_refs": [
+            "turn2search2",
+            "turn2search38"
+          ],
+          "products": [
+            {
+              "product_name": "Byfield Gate",
+              "description": null,
+              "url": null,
+              "notes": "Pressure treated with Tanalith E Treatment. Made-to-measure sizes offered in this gate range.",
+              "source_refs": [
+                "turn2search2"
+              ],
+              "variants": [
+                {
+                  "width": "0.9m",
+                  "height": "1.2m",
+                  "brace": "Single",
+                  "unit": "Each"
+                },
+                {
+                  "width": "1.2m",
+                  "height": "1.2m",
+                  "brace": "Single",
+                  "unit": "Each"
+                },
+                {
+                  "width": "1.5m",
+                  "height": "1.2m",
+                  "brace": "Single and Dropper",
+                  "unit": "Each"
+                },
+                {
+                  "width": "1.8m",
+                  "height": "1.2m",
+                  "brace": "Diamond",
+                  "unit": "Each"
+                },
+                {
+                  "width": "2.4m",
+                  "height": "1.2m",
+                  "brace": "Diamond",
+                  "unit": "Each"
+                },
+                {
+                  "width": "3m",
+                  "height": "1.2m",
+                  "brace": "Diamond",
+                  "unit": "Each"
+                },
+                {
+                  "width": "3.6m",
+                  "height": "1.2m",
+                  "brace": "Diamond",
+                  "unit": "Each"
+                }
+              ]
+            },
+            {
+              "product_name": "Stratford Gates",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2",
+                "turn2search38"
+              ],
+              "variants": [
+                {
+                  "size": "Made to measure"
+                }
+              ]
+            },
+            {
+              "product_name": "Elite Byfield Gates",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2",
+                "turn2search38"
+              ],
+              "variants": [
+                {
+                  "size": "Made to measure"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subcategory": "Gate posts & Wall Plates",
+          "source_refs": [
+            "turn2search28"
+          ],
+          "products": [
+            {
+              "product_name": "Gate Post Four Way Weathered",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search28"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "Wall Plate - 100mm x 50mm",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search28"
+              ],
+              "variants": []
+            }
+          ]
+        }
+      ],
+      "products": []
+    },
+    {
+      "category": "Fencing",
+      "notes": null,
+      "source_refs": [
+        "turn2search2",
+        "turn2search36"
+      ],
+      "subcategories": [
+        {
+          "subcategory": "Fence Panels",
+          "products": [
+            {
+              "product_name": "Feather Edge Panel",
+              "description": null,
+              "url": null,
+              "notes": "Panels are pressure treated with Tanalith E Treatment.",
+              "source_refs": [
+                "turn2search2"
+              ],
+              "variants": [
+                {
+                  "width": "6ft",
+                  "height": "3ft"
+                },
+                {
+                  "width": "6ft",
+                  "height": "4ft"
+                },
+                {
+                  "width": "6ft",
+                  "height": "5ft"
+                },
+                {
+                  "width": "6ft",
+                  "height": "5ft 6in"
+                },
+                {
+                  "width": "6ft",
+                  "height": "6ft"
+                }
+              ]
+            },
+            {
+              "product_name": "Waney Edge Panel",
+              "description": null,
+              "url": null,
+              "notes": "Panels are pressure treated with Tanalith E Treatment.",
+              "source_refs": [
+                "turn2search2"
+              ],
+              "variants": [
+                {
+                  "width": "6ft",
+                  "height": "3ft"
+                },
+                {
+                  "width": "6ft",
+                  "height": "4ft"
+                },
+                {
+                  "width": "6ft",
+                  "height": "5ft"
+                },
+                {
+                  "width": "6ft",
+                  "height": "6ft"
+                }
+              ]
+            }
+          ],
+          "source_refs": [
+            "turn2search2"
+          ]
+        },
+        {
+          "subcategory": "Feather Edge Fencing",
+          "products": [
+            {
+              "product_name": "Arris Rails",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search36"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "Capping & Counter Rail",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search36"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "Feather Edge Boards",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search36"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "Gravel Boards",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search36"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "Notched Posts",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search36"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "Notched Wall Plate - 100mm x 50mm",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search36"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "Wall Plate - 100mm x 50mm",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search36"
+              ],
+              "variants": []
+            }
+          ],
+          "source_refs": [
+            "turn2search36"
+          ]
+        }
+      ],
+      "products": []
+    },
+    {
+      "category": "Timber Products",
+      "notes": null,
+      "source_refs": [
+        "turn2search2",
+        "turn2search35"
+      ],
+      "subcategories": [
+        {
+          "subcategory": "Battens, Boards & Posts",
+          "products": [
+            {
+              "product_name": "Wooden Posts - Sawn Post",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2"
+              ],
+              "variants": [
+                {
+                  "length": "1.8m",
+                  "width": "100mm",
+                  "depth": "100mm"
+                },
+                {
+                  "length": "2.4m",
+                  "width": "100mm",
+                  "depth": "100mm"
+                },
+                {
+                  "length": "3.0m",
+                  "width": "100mm",
+                  "depth": "100mm"
+                },
+                {
+                  "length": "3.6m",
+                  "width": "100mm",
+                  "depth": "100mm"
+                }
+              ]
+            },
+            {
+              "product_name": "Wooden Posts - Planed All Round",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search2"
+              ],
+              "variants": [
+                {
+                  "length": "2.4m",
+                  "width": "100mm",
+                  "depth": "100mm"
+                },
+                {
+                  "length": "3m",
+                  "width": "100mm",
+                  "depth": "100mm"
+                }
+              ]
+            },
+            {
+              "product_name": "Sawn Battens",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search35"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "Sawn Boards",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search35"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "P.A.R Landscaping Batten Eased Edge",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search35"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "Planed All Round Post (P.A.R)",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search35"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "Sawn Post",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn1search1",
+                "turn2search35"
+              ],
+              "variants": [
+                {
+                  "cost_gbp": 4.84,
+                  "unit": "Each",
+                  "price_basis": "Homepage featured from price"
+                }
+              ]
+            }
+          ],
+          "source_refs": [
+            "turn2search2",
+            "turn2search35"
+          ]
+        }
+      ],
+      "products": []
+    },
+    {
+      "category": "KDM Gates, Panels and Arches",
+      "notes": "Main Line Timber states it is an outlet for KDM gates and panels, an established landscaping and garden products brand.",
+      "source_refs": [
+        "turn2search2"
+      ],
+      "subcategories": [],
+      "products": [
+        {
+          "product_name": "Double Slatted Gate",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "0.9m",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Arched Lattice Top Gate",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "0.9m",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Arched Horizontal Gate",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "0.9m",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Square Horizontal Gate",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "0.9m",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Square Horizontal Panel",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1.8m",
+              "height": "0.9m"
+            },
+            {
+              "width": "1.8m",
+              "height": "1.2m"
+            },
+            {
+              "width": "1.8m",
+              "height": "1.5m"
+            },
+            {
+              "width": "1.8m",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Square Horizontal Lattice Panel",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1.8m",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Tongue & Groove with Lattice Top Panel",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1.8m",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Tongue & Groove Panel",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1.8m",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Hazel Hurdles Panel",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "6ft",
+              "height": "3ft"
+            },
+            {
+              "width": "6ft",
+              "height": "4ft"
+            },
+            {
+              "width": "6ft",
+              "height": "5ft"
+            },
+            {
+              "width": "6ft",
+              "height": "6ft"
+            }
+          ]
+        },
+        {
+          "product_name": "Framed Willow Hurdle Panel",
+          "description": null,
+          "url": null,
+          "notes": "Willow and Hazel Hurdles panels are best suited to hang from round posts.",
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "6ft",
+              "height": "6ft"
+            }
+          ]
+        },
+        {
+          "product_name": "Panel Extension Kits",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": []
+        },
+        {
+          "product_name": "Picket Panels",
+          "description": "Ready-made picket panels; made in house.",
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1.8m",
+              "height": "0.9m"
+            },
+            {
+              "width": "1.8m",
+              "height": "1.2m"
+            }
+          ]
+        },
+        {
+          "product_name": "Omega Top Arch",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1250mm",
+              "depth": "600mm",
+              "height": "2600mm"
+            }
+          ]
+        },
+        {
+          "product_name": "Single Slatted Panel",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1.8m",
+              "height": "1.5m"
+            },
+            {
+              "width": "1.8m",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Double Slatted Panel",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1.8m",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Omega Lattice Panel",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1.8m",
+              "height": "0.9m"
+            },
+            {
+              "width": "1.8m",
+              "height": "1.2m"
+            },
+            {
+              "width": "1.8m",
+              "height": "1.5m"
+            },
+            {
+              "width": "1.8m",
+              "height": "1.8m"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Trellis",
+      "notes": null,
+      "source_refs": [
+        "turn2search2"
+      ],
+      "subcategories": [],
+      "products": [
+        {
+          "product_name": "Diamond Trellis Panels",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1830mm",
+              "height": "300mm"
+            },
+            {
+              "width": "1830mm",
+              "height": "600mm"
+            },
+            {
+              "width": "1830mm",
+              "height": "0.9m"
+            },
+            {
+              "width": "1830mm",
+              "height": "1.2m"
+            },
+            {
+              "width": "1830mm",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Domed Diamond Trellis Panels",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1830mm",
+              "height": "450mm"
+            },
+            {
+              "width": "1830mm",
+              "height": "600mm"
+            },
+            {
+              "width": "1830mm",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Privacy Diamond Trellis Panels",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1830mm",
+              "height": "300mm"
+            },
+            {
+              "width": "1830mm",
+              "height": "600mm"
+            },
+            {
+              "width": "1830mm",
+              "height": "1.8m"
+            }
+          ]
+        },
+        {
+          "product_name": "Square Trellis Panels",
+          "description": null,
+          "url": null,
+          "notes": "Heavy duty and bespoke sizes available; square trellis panels are made in house.",
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "6ft",
+              "height": "1ft"
+            },
+            {
+              "width": "6ft",
+              "height": "2ft"
+            },
+            {
+              "width": "6ft",
+              "height": "6ft"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Concrete Products",
+      "notes": null,
+      "source_refs": [
+        "turn2search2"
+      ],
+      "subcategories": [],
+      "products": [
+        {
+          "product_name": "Durapost Gravel Boards",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "width": "1830mm",
+              "depth": "150mm",
+              "height": "50mm"
+            }
+          ]
+        },
+        {
+          "product_name": "Slotted Concrete Posts",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "type": "Intermediate",
+              "length": "6ft"
+            },
+            {
+              "type": "Intermediate",
+              "length": "7ft"
+            },
+            {
+              "type": "Intermediate",
+              "length": "8ft"
+            },
+            {
+              "type": "Intermediate",
+              "length": "9ft"
+            },
+            {
+              "type": "Intermediate",
+              "length": "10ft"
+            },
+            {
+              "type": "Corner",
+              "length": "8ft"
+            },
+            {
+              "type": "Corner",
+              "length": "9ft"
+            },
+            {
+              "type": "End",
+              "length": "8ft"
+            },
+            {
+              "type": "End",
+              "length": "9ft"
+            }
+          ]
+        },
+        {
+          "product_name": "Concrete Gravel Boards",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "type": "Recessed",
+              "size": "6ft x 6in x 2in"
+            },
+            {
+              "type": "Recessed",
+              "size": "6ft x 12in x 2in"
+            },
+            {
+              "type": "Rock Faced",
+              "size": "6ft x 12in x 2in"
+            }
+          ]
+        },
+        {
+          "product_name": "Durapost Posts",
+          "description": null,
+          "url": null,
+          "notes": null,
+          "source_refs": [
+            "turn2search2"
+          ],
+          "variants": [
+            {
+              "length": "2.4m",
+              "width": "51mm",
+              "depth": "48mm"
+            },
+            {
+              "length": "2.7m",
+              "width": "51mm",
+              "depth": "48mm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Accessories",
+      "notes": null,
+      "source_refs": [
+        "turn2search31",
+        "turn2search41",
+        "turn2search49"
+      ],
+      "subcategories": [
+        {
+          "subcategory": "Drymix",
+          "products": [
+            {
+              "product_name": "Hansons Postfix",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search41"
+              ],
+              "variants": []
+            },
+            {
+              "product_name": "Homepack/Carlton Drymix",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search41"
+              ],
+              "variants": []
+            }
+          ],
+          "source_refs": [
+            "turn2search41"
+          ]
+        },
+        {
+          "subcategory": "Black Gate Fittings",
+          "products": [
+            {
+              "product_name": "Adjustable Hook & Band Set- BK",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search31"
+              ],
+              "variants": [
+                {
+                  "cost_gbp": 38.59,
+                  "unit": "Each",
+                  "price_basis": "From price"
+                }
+              ]
+            },
+            {
+              "product_name": "Auto Gate Catch BK",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search31"
+              ],
+              "variants": [
+                {
+                  "cost_gbp": 3.4,
+                  "unit": "Each",
+                  "price_basis": "From price"
+                }
+              ]
+            },
+            {
+              "product_name": "Brenton Padbolt BK",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search31"
+              ],
+              "variants": [
+                {
+                  "cost_gbp": 5.11,
+                  "unit": "Each",
+                  "price_basis": "From price"
+                }
+              ]
+            }
+          ],
+          "source_refs": [
+            "turn2search31"
+          ]
+        },
+        {
+          "subcategory": "Fixings",
+          "products": [
+            {
+              "product_name": "Bolts & Nuts",
+              "description": null,
+              "url": null,
+              "notes": null,
+              "source_refs": [
+                "turn2search49"
+              ],
+              "variants": [
+                {
+                  "size": "M10 x 160mm",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 0.94,
+                  "unit": "Each",
+                  "vat_included": true
+                },
+                {
+                  "size": "M10 x 200mm",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 1.09,
+                  "unit": "Each",
+                  "vat_included": true
+                },
+                {
+                  "size": "M10 x 240mm",
+                  "stock_status": "In Stock",
+                  "cost_gbp": 1.43,
+                  "unit": "Each",
+                  "vat_included": true
+                }
+              ]
+            }
+          ],
+          "source_refs": [
+            "turn2search49"
+          ]
+        }
+      ],
+      "products": []
+    }
+  ]
+}
