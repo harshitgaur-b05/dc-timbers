@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HEARTWOOD TIMBER | Professional Timber Merchant</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Fira+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100..900&family=Fira+Sans:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#fbddc7",
+                        "primary-container": "#4a3728",
+                        "surface-container-high": "#eee7e4",
+                        "surface-container-highest": "#e8e1de",
+                        "surface-variant": "#e8e1de",
+                        "outline": "#80756d",
+                        "on-secondary-fixed-variant": "#633f1b",
+                        "on-tertiary-fixed": "#121f09",
+                        "background": "#fff8f5",
+                        "secondary-fixed-dim": "#f1bc8e",
+                        "on-primary-fixed": "#28180b",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#bba08c",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1e1b1a",
+                        "tertiary-fixed-dim": "#bbccaa",
+                        "secondary": "#7e5630",
+                        "on-surface-variant": "#4e453e",
+                        "on-background": "#1e1b1a",
+                        "surface": "#fff8f5",
+                        "primary": "#322214",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#705a49",
+                        "inverse-on-surface": "#f6efec",
+                        "tertiary-container": "#313f26",
+                        "surface-container": "#f3ecea",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fdc799",
+                        "inverse-primary": "#dec1ac",
+                        "outline-variant": "#d2c4bb",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#78512c",
+                        "on-tertiary-container": "#9aaa8b",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#574333",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fff8f5",
+                        "tertiary-fixed": "#d7e8c5",
+                        "surface-container-low": "#f9f2ef",
+                        "primary-fixed-dim": "#dec1ac",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#33302e",
+                        "tertiary": "#1c2912",
+                        "on-secondary-fixed": "#2d1600",
+                        "surface-dim": "#dfd9d6",
+                        "secondary-fixed": "#ffdcc0",
+                        "on-tertiary-fixed-variant": "#3d4b31",
+                        "warning-orange": "#D97A2B"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "gutter": "16px",
+                        "base": "4px",
+                        "md": "16px",
+                        "margin-desktop": "32px",
+                        "lg": "24px",
+                        "xs": "4px",
+                        "margin-mobile": "16px",
+                        "xl": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Barlow Condensed"],
+                        "label-code": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Barlow Condensed"],
+                        "body-lg": ["Fira Sans"],
+                        "headline-xl": ["Barlow Condensed"],
+                        "headline-lg": ["Barlow Condensed"],
+                        "body-md": ["Fira Sans"],
+                        "body-sm": ["Fira Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-code": ["13px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .blueprint-grid {
+            background-image: linear-gradient(rgba(128, 117, 109, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(128, 117, 109, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .cut-list-border {
+            border: 1px solid rgba(50, 34, 20, 0.2);
+        }
+
+        .notched-tag {
+            clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container">
+    <!-- Top Navigation Shell -->
+    <header class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim border-b border-outline/20">
+        <nav class="flex justify-between items-center w-full px-margin-desktop py-md max-w-7xl mx-auto">
+            <div class="flex items-center gap-sm">
+                <img alt="Heartwood Timber Logo" class="h-10 w-10 object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmhyQwutr4IYApqdd_rOCW380XGi2epN7fo1SXtB5jJL7DEzC61RlNSfS4vNhZFkcwbUOV6hVeTTsqNyL4H5ZENy3mS3Bf22A1W5zx_6FzX1Y_B9dOdYSRZ0jvTSWe2TxXRX9CLYxAZnmmS05dI6utsjqJiD9azYEtMAWWNFThlszzSs1Avlgpb_Vz3f4KKmJ2dwLbJmmKd5ggr54Yd8LBpfIPfrNzrzmsLrEDFv5A5gfu02JvK7O2--yibTEgT2l1Vw" />
+                <span
+                    class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed">HEARTWOOD
+                    TIMBER</span>
+            </div>
+            <div class="hidden md:flex gap-lg items-center">
+                <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                    href="#">Services</a>
+                <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                    href="#">Quality</a>
+                <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                    href="#">Process</a>
+                <a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200"
+                    href="#">Contact</a>
+                <button
+                    class="bg-warning-orange text-white px-lg py-sm font-headline-md uppercase border-2 border-primary active:scale-95 transition-all">Get
+                    Quote</button>
+            </div>
+            <button class="md:hidden text-primary">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center overflow-hidden blueprint-grid">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center brightness-75"
+                    data-alt="A wide-angle, cinematic view of a professional timber yard at dawn. Neatly stacked piles of high-quality, light-colored raw timber boards stretch into the distance under a soft, golden morning light. The setting is organized and industrious, featuring industrial shelving and clear pathways. The atmosphere is grounded, authentic, and emphasizes structural reliability and trade-grade scale."
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3WSJJUGg5VpvNg61fD4_yvain73nPNINARPU1PyHVBSW17m07fhw3fMnSPNOCxKeTbMqxdt3efSzK7NmP2Ip47LQUVhAXYNkXYMdgr48quMw5XvSfVxL3kd1PS10owoZw4LKhdX8teC-CWxKsZViDg6pPdL1mEoVhNndtUVTSkEYsMwTW4MnKLlgmSCviVQCy8-v61PM3kZGjrM-zUjMZcuAgIugvDTOxfXH-Hugx3AjlI5sEYdT6')">
+                </div>
+            </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-margin-desktop w-full">
+                <div
+                    class="bg-surface/90 backdrop-blur-sm p-xl max-w-2xl border-2 border-primary shadow-[8px_8px_0px_0px_rgba(50,34,20,1)]">
+                    <div class="flex items-center gap-base mb-md">
+                        <span class="font-label-code text-label-code text-secondary uppercase tracking-widest">Est.
+                            2024</span>
+                        <div class="h-px w-12 bg-outline/40"></div>
+                    </div>
+                    <h1 class="font-headline-xl text-headline-xl text-primary mb-md leading-none uppercase">Premium
+                        Timber,<br />Professional Grade.<br />Built to Last.</h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-xl">Supplying the trade and public
+                        with high-quality fencing, gates, and decking. Get a quote today for your next project from your
+                        local timber specialists.</p>
+                    <div class="flex flex-col sm:flex-row gap-md">
+                        <button
+                            class="bg-warning-orange text-white px-xl py-md font-headline-md uppercase border-2 border-primary hover:bg-on-secondary-fixed-variant transition-colors flex items-center justify-center gap-sm">
+                            Request a Quote
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                        <button
+                            class="bg-transparent text-primary px-xl py-md font-headline-md uppercase border-2 border-primary hover:bg-surface-container-high transition-colors">
+                            View Products
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Measurement Motif Decorative Element -->
+            <div class="absolute bottom-10 right-10 hidden lg:block">
+                <div class="flex flex-col items-end opacity-40">
+                    <div class="flex items-center gap-sm">
+                        <div class="w-24 h-px bg-primary"></div>
+                        <span class="font-label-code text-[10px] text-primary">C24 GRADED</span>
+                    </div>
+                    <div class="flex items-center gap-sm">
+                        <div class="w-32 h-px bg-primary"></div>
+                        <span class="font-label-code text-[10px] text-primary">TANALITH-E TREATED</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Trust Bar -->
+        <section class="bg-primary text-on-primary py-lg border-y-2 border-outline">
+            <div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-lg">
+                <div class="flex items-center gap-md">
+                    <span class="material-symbols-outlined text-secondary-fixed">verified</span>
+                    <div>
+                        <p class="font-headline-md text-sm uppercase leading-tight">Quality Guaranteed</p>
+                        <p class="font-body-sm text-[11px] opacity-70">Hand-picked stock</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-md">
+                    <span class="material-symbols-outlined text-secondary-fixed">engineering</span>
+                    <div>
+                        <p class="font-headline-md text-sm uppercase leading-tight">Expert Advice</p>
+                        <p class="font-body-sm text-[11px] opacity-70">Decades of experience</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-md">
+                    <span class="material-symbols-outlined text-secondary-fixed">local_shipping</span>
+                    <div>
+                        <p class="font-headline-md text-sm uppercase leading-tight">Local Delivery</p>
+                        <p class="font-body-sm text-[11px] opacity-70">Prompt yard-to-site</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-md">
+                    <span class="material-symbols-outlined text-secondary-fixed">payments</span>
+                    <div>
+                        <p class="font-headline-md text-sm uppercase leading-tight">Trade Prices</p>
+                        <p class="font-body-sm text-[11px] opacity-70">Competitive rates</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Key Services Grid -->
+        <section class="py-xl bg-surface-container-low relative">
+            <div class="max-w-7xl mx-auto px-margin-desktop">
+                <div class="mb-xl flex items-end justify-between">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-primary uppercase">Specialist Inventory</h2>
+                        <div class="w-20 h-1 bg-warning-orange mt-base"></div>
+                    </div>
+                    <span class="hidden md:block font-label-code text-body-sm text-outline">CATALOGUE VOL. 01 /
+                        2024</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                    <!-- Service Card 1 -->
+                    <div class="bg-surface border-2 border-primary flex flex-col group">
+                        <div class="h-64 overflow-hidden border-b-2 border-primary relative">
+                            <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A detailed close-up of high-quality pressure-treated fencing panels and gravel boards arranged in a sturdy stack. The wood grain is prominent and clean, showing the natural beauty of the timber. Soft afternoon sunlight highlights the textures and precision-cut edges of the boards. Professional, industrial aesthetic with warm wooden tones and a sense of durability."
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0qzxJgsMTDYmfKgPFpYCasdnjwScfGL6od45XWXK-kJ90Oh_V9Bqy5WbSRw8pB68-CvebBAfK2EdeO6v-rSY6EScND-sbpdhHBl4WxArd-nFvZJgN6ypHwkeGnOVM8mbLmnxjKSxJR5EEHisdGG46tS0mGT7qBNWWqD_Q0oRFCg6YOj05X7jbL7act6149G9S5jxj0gEs9ge8pV-LPYoe9yawwa64IGOBKwEKSTRt3Oq0sqjsB9pu')">
+                            </div>
+                            <div
+                                class="absolute top-4 left-4 bg-primary text-white font-label-code text-[10px] px-sm py-1 notched-tag">
+                                IN STOCK</div>
+                        </div>
+                        <div class="p-lg flex-grow">
+                            <h3 class="font-headline-md text-headline-md text-primary mb-sm uppercase">Fencing & Gravel
+                                Boards</h3>
+                            <p class="font-body-sm text-on-surface-variant mb-md">Heavy-duty lap panels, featheredge,
+                                and concrete-alternative gravel boards built for the British weather.</p>
+                        </div>
+                        <div
+                            class="p-md bg-surface-container border-t border-outline/20 flex justify-between items-center">
+                            <span class="font-label-code text-xs uppercase text-secondary">Spec: Treated / Various
+                                Sizes</span>
+                            <a class="font-headline-md text-sm text-primary uppercase flex items-center gap-xs hover:underline"
+                                href="#">
+                                Learn More <span class="material-symbols-outlined text-sm">open_in_new</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-surface border-2 border-primary flex flex-col group">
+                        <div class="h-64 overflow-hidden border-b-2 border-primary relative">
+                            <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A master craftsman assembling a heavy-duty bespoke wooden driveway gate in a professional workshop. The gate is made of rich, warm-toned oak with visible mortise and tenon joints. Tools and wood shavings are visible on a workbench in the background. The lighting is focused and warm, emphasizing the quality of construction and bespoke joinery detail."
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4CCgk_BP8aQ-ghQREnEOMyimB_oYobMGWdO6LHKy6vule8nsa9-QcanL-w0jkNlZdho6nmJphqN9_3yUqFc4kVVZiSXXgK9qQyzaokG5VElGvIcVNj3AZzeG_KmSt5l265fVPcsnJLXr-LJK_OiNOPjMnHZmgl7qqPXJWWefW8VI2JRhx7-krNKUaUMwHcY9arzlUZfhlOMa5GW2gPaNO4mQ-RG5OR09WW4HJ85mmPw2lRP1TyqsN')">
+                            </div>
+                        </div>
+                        <div class="p-lg flex-grow">
+                            <h3 class="font-headline-md text-headline-md text-primary mb-sm uppercase">Bespoke Gates
+                            </h3>
+                            <p class="font-body-sm text-on-surface-variant mb-md">Custom-built driveway and garden
+                                gates. Hand-crafted in our yard to your exact dimensions and specifications.</p>
+                        </div>
+                        <div
+                            class="p-md bg-surface-container border-t border-outline/20 flex justify-between items-center">
+                            <span class="font-label-code text-xs uppercase text-secondary">Spec: Custom Joinery</span>
+                            <a class="font-headline-md text-sm text-primary uppercase flex items-center gap-xs hover:underline"
+                                href="#">
+                                Learn More <span class="material-symbols-outlined text-sm">open_in_new</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-surface border-2 border-primary flex flex-col group">
+                        <div class="h-64 overflow-hidden border-b-2 border-primary relative">
+                            <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A beautifully finished professional wooden deck installed in a contemporary garden. The decking boards are perfectly aligned with consistent gaps, featuring a warm, natural wood stain. The scene is clean and modern, with crisp lines and high-end landscaping in the background. Bright, natural daylight showcases the smooth finish and premium quality of the timber."
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQUSQzK5x82RniQKCPpzsVpB7zp_YUJlkOcZWhfC3GgtcQHP4ViIl5VgXyV7-E37DMyJeIy7AzTXzAlsflZ6fuh1GHDDf6SUU9JrRSVDjpWFuPWIEVRhjl0fyzXBOsAq5vCnbDUwNThrfl2aFp9hAPuCoWssKhupRXh6wFhiOHjLqplMLaeSqqtEHLiE1-JrplUzetZBp3hTRjNZB8pVzMQ-B2N0tDvsWEDqAdAN5WESuR6kwQFgKu')">
+                            </div>
+                        </div>
+                        <div class="p-lg flex-grow">
+                            <h3 class="font-headline-md text-headline-md text-primary mb-sm uppercase">Professional
+                                Decking</h3>
+                            <p class="font-body-sm text-on-surface-variant mb-md">Premium grooved and smooth decking
+                                boards. Available in various lengths with all necessary joists and fixings.</p>
+                        </div>
+                        <div
+                            class="p-md bg-surface-container border-t border-outline/20 flex justify-between items-center">
+                            <span class="font-label-code text-xs uppercase text-secondary">Spec: Slip-Resistant
+                                Grade</span>
+                            <a class="font-headline-md text-sm text-primary uppercase flex items-center gap-xs hover:underline"
+                                href="#">
+                                Learn More <span class="material-symbols-outlined text-sm">open_in_new</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us -->
+        <section class="py-xl border-y-2 border-outline/30">
+            <div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+                <div class="relative">
+                    <div
+                        class="border-2 border-primary p-md bg-surface-container-high rotate-1 absolute -inset-2 -z-10">
+                    </div>
+                    <div class="border-2 border-primary overflow-hidden">
+                        <div class="w-full h-[500px] bg-cover bg-center"
+                            data-alt="A close-up shot of a trade professional inspecting a stack of timber. They are holding a pencil and a tape measure, checking the dimensions of a perfectly cut board. The person is wearing rugged work gear. The background shows the busy yard environment. The visual style is grounded, practical, and highly focused on the 'trade professional' theme with high contrast and sharp focus."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD995xmdi7-rctYo13o34yOb45WQqfDMJmPUZLeIlm3Q0xod_6WJIa01Z4jVB8Asz8jfgu_pt-OFYuy9vo4K3bwSRMssNUnVxe1P2_ZAOGcvlFyLuS69cxWaPiPwJYhPHW73ijhBbdubC5jhWVmydENnl3INdEN5r_QbKulpzZyDYg913fFvAtEonckAGKFuwEDFmdPtU_QKhvGigDabAbJp7n7jWHYtG-3MNylzPmHIwdQ9EY1REQ-')">
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-lg">
+                    <h2 class="font-headline-lg text-headline-xl text-primary uppercase leading-none">Built on
+                        Reliability & Quality</h2>
+                    <p class="font-body-lg text-on-surface-variant">Heartwood Timber isn't just a supplier; we're your
+                        project partner. We understand that in the trade, time is money and quality is your reputation.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+                        <div class="p-md border border-outline/20 bg-surface">
+                            <span class="material-symbols-outlined text-warning-orange mb-sm">task_alt</span>
+                            <h4 class="font-headline-md text-md uppercase mb-xs">C24 Graded stock</h4>
+                            <p class="font-body-sm">All our structural timber is pressure treated and graded for maximum
+                                durability.</p>
+                        </div>
+                        <div class="p-md border border-outline/20 bg-surface">
+                            <span class="material-symbols-outlined text-warning-orange mb-sm">person</span>
+                            <h4 class="font-headline-md text-md uppercase mb-xs">Personal Service</h4>
+                            <p class="font-body-sm">No call centers. Speak directly to the yard manager who knows your
+                                order.</p>
+                        </div>
+                        <div class="p-md border border-outline/20 bg-surface">
+                            <span class="material-symbols-outlined text-warning-orange mb-sm">inventory_2</span>
+                            <h4 class="font-headline-md text-md uppercase mb-xs">In-Stock Promise</h4>
+                            <p class="font-body-sm">We maintain deep inventory levels of the most common trade sizes and
+                                profiles.</p>
+                        </div>
+                        <div class="p-md border border-outline/20 bg-surface">
+                            <span class="material-symbols-outlined text-warning-orange mb-sm">history_edu</span>
+                            <h4 class="font-headline-md text-md uppercase mb-xs">Technical Support</h4>
+                            <p class="font-body-sm">From cut lists to material estimations, we help you get the job done
+                                right.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Professional Standards Quote -->
+        <section class="py-xl bg-primary text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-xl opacity-10">
+                <span class="material-symbols-outlined text-[200px]"
+                    style="font-variation-settings: 'FILL' 1;">format_quote</span>
+            </div>
+            <div class="max-w-4xl mx-auto px-margin-desktop text-center relative z-10">
+                <div
+                    class="inline-block bg-warning-orange text-primary font-label-code text-xs px-md py-1 mb-lg uppercase font-bold">
+                    Professional Standards</div>
+                <blockquote class="font-headline-lg text-headline-lg italic mb-lg leading-tight">
+                    "The integrity of a build starts with the grain of the timber. We source only the highest grade
+                    redwood and whitewood, ensuring that every post, panel, and joist we supply meets the rigorous
+                    demands of professional landscaping and construction."
+                </blockquote>
+                <div class="w-12 h-px bg-white/40 mx-auto mb-md"></div>
+                <cite class="font-label-code text-secondary-fixed not-italic uppercase">Director, Heartwood Timber
+                    Merchant</cite>
+            </div>
+        </section>
+        <!-- Enquiry Form -->
+        <section class="py-xl bg-surface-container-highest">
+            <div class="max-w-7xl mx-auto px-margin-desktop">
+                <div class="bg-surface border-2 border-primary grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
+                    <div class="p-xl bg-primary text-on-primary flex flex-col justify-center">
+                        <h2 class="font-headline-xl text-headline-xl uppercase mb-md">Start Your Enquiry</h2>
+                        <p class="font-body-lg mb-xl opacity-80">Looking for a specific cut list or trade pricing? Send
+                            us your requirements and our yard team will get back to you with a competitive quote within
+                            24 hours.</p>
+                        <div class="space-y-md">
+                            <div class="flex items-center gap-md">
+                                <span class="material-symbols-outlined text-warning-orange">call</span>
+                                <span class="font-headline-md">01234 567 890</span>
+                            </div>
+                            <div class="flex items-center gap-md">
+                                <span class="material-symbols-outlined text-warning-orange">location_on</span>
+                                <span class="font-body-md">The Timber Yard, Oakwood Industrial Park, TR2 4HD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-xl">
+                        <form class="space-y-lg">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+                                <div class="space-y-base">
+                                    <label class="font-label-code text-[11px] text-primary uppercase block">Your Full
+                                        Name</label>
+                                    <input
+                                        class="w-full bg-surface border border-outline px-md py-sm focus:ring-2 focus:ring-warning-orange focus:border-primary outline-none transition-all"
+                                        placeholder="John Doe" type="text" />
+                                </div>
+                                <div class="space-y-base">
+                                    <label class="font-label-code text-[11px] text-primary uppercase block">Phone
+                                        Number</label>
+                                    <input
+                                        class="w-full bg-surface border border-outline px-md py-sm focus:ring-2 focus:ring-warning-orange focus:border-primary outline-none transition-all"
+                                        placeholder="07123 456 789" type="tel" />
+                                </div>
+                            </div>
+                            <div class="space-y-base">
+                                <label class="font-label-code text-[11px] text-primary uppercase block">Project
+                                    Type</label>
+                                <select
+                                    class="w-full bg-surface border border-outline px-md py-sm focus:ring-2 focus:ring-warning-orange focus:border-primary outline-none transition-all">
+                                    <option>Select a category...</option>
+                                    <option>Fencing / Gravel Boards</option>
+                                    <option>Bespoke Gates</option>
+                                    <option>Decking & Joists</option>
+                                    <option>General Building Timber</option>
+                                    <option>Trade Account Enquiry</option>
+                                </select>
+                            </div>
+                            <div class="space-y-base">
+                                <label class="font-label-code text-[11px] text-primary uppercase block">Your
+                                    Requirements (Brief Description)</label>
+                                <textarea
+                                    class="w-full bg-surface border border-outline px-md py-sm focus:ring-2 focus:ring-warning-orange focus:border-primary outline-none transition-all"
+                                    placeholder="e.g. 10x 6ft Closeboard panels, 12x 8ft Posts..." rows="4"></textarea>
+                            </div>
+                            <button
+                                class="w-full bg-warning-orange text-white font-headline-md text-headline-md uppercase py-md border-2 border-primary shadow-[4px_4px_0px_0px_rgba(50,34,20,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
+                                type="submit">
+                                Submit Quote Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-xl bg-primary dark:bg-surface-container-highest border-t-2 border-outline">
+        <div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-lg max-w-7xl mx-auto">
+            <div class="flex flex-col items-center md:items-start gap-sm">
+                <span class="font-headline-sm text-headline-sm font-bold text-on-primary">HEARTWOOD TIMBER</span>
+                <p class="text-on-primary/80 font-body-sm max-w-xs text-center md:text-left">The regional leader in
+                    premium timber supply for fencing, decking and bespoke joinery projects.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-lg">
+                <a class="text-on-primary/80 dark:text-on-surface-variant font-body-sm hover:underline hover:text-secondary-fixed"
+                    href="#">Terms of Service</a>
+                <a class="text-on-primary/80 dark:text-on-surface-variant font-body-sm hover:underline hover:text-secondary-fixed"
+                    href="#">Privacy Policy</a>
+                <a class="text-on-primary/80 dark:text-on-surface-variant font-body-sm hover:underline hover:text-secondary-fixed"
+                    href="#">Delivery Areas</a>
+                <a class="text-on-primary/80 dark:text-on-surface-variant font-body-sm hover:underline hover:text-secondary-fixed"
+                    href="#">Enquiry Guide</a>
+            </div>
+            <p class="text-on-primary/60 font-body-sm text-[11px] text-center">© 2024 Heartwood Timber Merchant. All
+                Rights Reserved. Built for the Trade.</p>
+        </div>
+    </footer>
+    <script>
+        // Micro-interactions for form and buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+        });
+
+        // Simple scroll reveal for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.group').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>
