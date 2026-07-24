@@ -1,10 +1,17 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { connectDB } from "@/lib/mongodb";
 import Enquiry from "@/models/Enquiry";
 import BlogPost from "@/models/BlogPost";
 import Product from "@/models/Product";
+import { getAdminSession } from "@/lib/auth";
 
 export default async function AdminDashboardPage() {
+  const session = await getAdminSession();
+  if (!session) {
+    redirect("/admin/login");
+  }
+
   let totalEnquiries = 0, newEnquiries = 0, totalPosts = 0, totalProducts = 0;
   let recentEnquiries: any[] = [];
 
@@ -52,6 +59,24 @@ export default async function AdminDashboardPage() {
               {value}
             </span>
           </div>
+        ))}
+      </div>
+
+      {/* Quick Actions */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+        {[
+          { href: "/admin/products/new", icon: "add_box", label: "Add New Product", color: "bg-amber-600" },
+          { href: "/admin/products", icon: "inventory_2", label: "Manage Products", color: "bg-stone-700" },
+          { href: "/admin/enquiries", icon: "inbox", label: "View Enquiries", color: "bg-stone-700" },
+        ].map(({ href, icon, label, color }) => (
+          <Link
+            key={href}
+            href={href}
+            className={`flex items-center gap-3 px-5 py-4 ${color} text-white font-bold text-sm uppercase tracking-wide rounded-lg hover:opacity-90 transition-all`}
+          >
+            <span className="material-symbols-outlined">{icon}</span>
+            {label}
+          </Link>
         ))}
       </div>
 

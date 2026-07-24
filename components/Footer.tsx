@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const depots = [
   {
@@ -38,7 +39,7 @@ const legalLinks = [
   { href: "/terms", label: "Terms of Service" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/delivery", label: "Delivery Areas" },
-  { href: "/contact", label: "Enquiry Guide" },
+  { href: "/admin/login", label: "Admin Portal" },
 ];
 
 export default function Footer() {
@@ -56,12 +57,17 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-8 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Col 1 — Logo + description */}
         <div className="flex flex-col gap-4">
-          <span
-            className="text-2xl font-black uppercase tracking-tight"
-            style={{ fontFamily: "var(--font-headline)", color: "var(--color-on-primary)" }}
-          >
-            DCtimbers
-          </span>
+          <div className="flex items-center gap-3">
+            <div className="relative h-9 w-9">
+              <Image src="/logo.jpeg" alt="DCtimbers Logo" fill className="object-contain rounded-xs" />
+            </div>
+            <span
+              className="text-2xl font-black uppercase tracking-tight"
+              style={{ fontFamily: "var(--font-headline)", color: "var(--color-on-primary)" }}
+            >
+              DCtimbers
+            </span>
+          </div>
           <p className="text-sm leading-relaxed opacity-75" style={{ color: "var(--color-on-primary)" }}>
             The regional leader in premium timber supply — fencing, decking,
             bespoke gates, and specialist landscaping products for trade and

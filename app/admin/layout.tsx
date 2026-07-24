@@ -9,9 +9,9 @@ export default async function AdminLayout({
 }) {
   const session = await getAdminSession();
 
-  // Route protection
+  // Route protection — allow login page to render without layout if unauthenticated
   if (!session) {
-    nextRedirect("/admin/login");
+    return <>{children}</>;
   }
 
   return (
@@ -57,6 +57,14 @@ export default async function AdminLayout({
             >
               <span className="material-symbols-outlined text-lg">inbox</span>
               Customer Enquiries
+            </Link>
+            <Link
+              href="/admin/products"
+              className="px-4 py-3 rounded font-bold uppercase text-sm flex items-center gap-3 hover:bg-white/10 transition-colors"
+              style={{ fontFamily: "var(--font-headline)" }}
+            >
+              <span className="material-symbols-outlined text-lg">inventory_2</span>
+              Products
             </Link>
             <Link
               href="/admin/blog"

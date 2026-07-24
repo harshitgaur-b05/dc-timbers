@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface Enquiry {
   _id: string;
@@ -17,6 +18,7 @@ export default function AdminEnquiriesPage() {
   const [enquiries, setEnquiries] = useState<Enquiry[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const router = useRouter();
   useEffect(() => {
     fetchEnquiries();
   }, []);
@@ -24,6 +26,10 @@ export default function AdminEnquiriesPage() {
   const fetchEnquiries = async () => {
     try {
       const res = await fetch("/api/admin/enquiries");
+      if (res.status === 401) {
+        router.push("/admin/login");
+        return;
+      }
       if (res.ok) {
         const data = await res.json();
         setEnquiries(data);

@@ -150,17 +150,17 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-8 w-full py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 sm:py-20">
           <div
-            className="max-w-2xl p-10 border-2 backdrop-blur-sm"
+            className="max-w-2xl p-6 sm:p-10 border-2 backdrop-blur-sm"
             style={{
               backgroundColor: "rgba(255,248,245,0.92)",
               borderColor: "var(--color-primary)",
-              boxShadow: "8px 8px 0px 0px rgba(50,34,20,1)",
+              boxShadow: "6px 6px 0px 0px rgba(50,34,20,1)",
             }}
           >
             {/* Eyebrow */}
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
               <span
                 className="text-xs uppercase tracking-widest font-black"
                 style={{
@@ -177,7 +177,7 @@ export default function HomePage() {
             </div>
 
             <h1
-              className="text-5xl md:text-6xl font-black uppercase leading-none mb-5"
+              className="text-3xl sm:text-5xl md:text-6xl font-black uppercase leading-tight sm:leading-none mb-4 sm:mb-5"
               style={{
                 fontFamily: "var(--font-headline)",
                 color: "var(--color-primary)",
@@ -191,7 +191,7 @@ export default function HomePage() {
             </h1>
 
             <p
-              className="text-lg leading-relaxed mb-8"
+              className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8"
               style={{ color: "var(--color-on-surface-variant)" }}
             >
               Supplying trade and public customers with high-quality fencing,
@@ -202,7 +202,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-black uppercase tracking-wide border-2 shadow-hard hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 text-white font-black uppercase tracking-wide border-2 shadow-hard hover:shadow-none transition-all"
                 style={{
                   fontFamily: "var(--font-headline)",
                   backgroundColor: "var(--color-warning-orange)",
@@ -216,7 +216,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/products"
-                className="inline-flex items-center justify-center px-8 py-4 font-black uppercase tracking-wide border-2 transition-colors"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 font-black uppercase tracking-wide border-2 transition-colors"
                 style={{
                   fontFamily: "var(--font-headline)",
                   color: "var(--color-primary)",
@@ -238,24 +238,24 @@ export default function HomePage() {
           borderColor: "var(--color-outline)",
         }}
       >
-        <div className="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {trustItems.map((t) => (
-            <div key={t.title} className="flex items-center gap-4">
+            <div key={t.title} className="flex items-center gap-3 sm:gap-4">
               <span
-                className="material-symbols-outlined text-3xl flex-shrink-0"
+                className="material-symbols-outlined text-2xl sm:text-3xl flex-shrink-0"
                 style={{ color: "var(--color-secondary-fixed-dim)" }}
               >
                 {t.icon}
               </span>
               <div>
                 <p
-                  className="text-sm font-black uppercase leading-tight text-white"
+                  className="text-xs sm:text-sm font-black uppercase leading-tight text-white"
                   style={{ fontFamily: "var(--font-headline)" }}
                 >
                   {t.title}
                 </p>
                 <p
-                  className="text-xs opacity-70 text-white"
+                  className="text-[11px] sm:text-xs opacity-70 text-white"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {t.sub}
@@ -268,14 +268,14 @@ export default function HomePage() {
 
       {/* ── SPECIALIST INVENTORY ──────────────────────────────────────── */}
       <section
-        className="py-20"
+        className="py-12 sm:py-20"
         style={{ backgroundColor: "var(--color-surface-container-low)" }}
       >
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="mb-12 flex items-end justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 sm:mb-12 flex items-end justify-between">
             <div>
               <h2
-                className="text-4xl font-black uppercase"
+                className="text-2xl sm:text-4xl font-black uppercase"
                 style={{
                   fontFamily: "var(--font-headline)",
                   color: "var(--color-primary)",

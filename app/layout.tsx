@@ -42,6 +42,8 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
+import AppShell from "@/components/AppShell";
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -57,9 +59,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col" style={{ fontFamily: "var(--font-body)" }}>
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );

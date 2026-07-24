@@ -15,9 +15,9 @@ import { readFileSync } from "fs";
 import { join } from "path";
 
 // ── inline mongoose connection (avoids import issues in script context) ──────
-const MONGO_URI = process.env.MONGO_URI as string;
+const MONGO_URI = (process.env.MONGO_URI || process.env.MONGODB_URI) as string;
 if (!MONGO_URI) {
-  console.error("❌  MONGO_URI not set in .env.local");
+  console.error("❌  MONGO_URI or MONGODB_URI not set in .env.local");
   process.exit(1);
 }
 

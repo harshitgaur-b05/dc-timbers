@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface Post {
   _id: string;
@@ -14,6 +15,7 @@ interface Post {
 export default function AdminBlogListPage() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     fetchPosts();
@@ -22,6 +24,10 @@ export default function AdminBlogListPage() {
   const fetchPosts = async () => {
     try {
       const res = await fetch("/api/admin/blog");
+      if (res.status === 401) {
+        router.push("/admin/login");
+        return;
+      }
       if (res.ok) {
         const data = await res.json();
         setPosts(data);

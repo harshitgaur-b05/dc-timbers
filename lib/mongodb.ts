@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 // Disable buffering globally — operations fail immediately instead of timing out
 mongoose.set("bufferCommands", false);
 
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI;
 const NO_DB =
   !MONGO_URI || MONGO_URI === "paste_my_mongodb_connection_string_here";
 
