@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import EnquiryForm from "@/components/EnquiryForm";
+import { connectDB } from "@/lib/mongodb";
+import SiteSettings from "@/models/SiteSettings";
 
 export const metadata: Metadata = {
   title: "DCtimbers | Premium Timber, Gates, Fencing & Decking Merchant",
@@ -113,7 +115,11 @@ const localBusinessJsonLd = {
   ],
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  await connectDB();
+  const settings = await SiteSettings.findOne().lean();
+  const heroImage = settings?.heroBannerImage || "";
+
   return (
     <>
       <script
@@ -130,8 +136,9 @@ export default function HomePage() {
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "linear-gradient(135deg, rgba(50,34,20,0.85) 0%, rgba(50,34,20,0.6) 60%, rgba(50,34,20,0.3) 100%)",
+            backgroundImage: heroImage
+              ? `linear-gradient(135deg, rgba(50,34,20,0.85) 0%, rgba(50,34,20,0.6) 60%, rgba(50,34,20,0.3) 100%), url(${heroImage})`
+              : "linear-gradient(135deg, rgba(50,34,20,0.85) 0%, rgba(50,34,20,0.6) 60%, rgba(50,34,20,0.3) 100%)",
           }}
         />
 

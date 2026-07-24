@@ -74,6 +74,14 @@ export default async function AdminLayout({
               <span className="material-symbols-outlined text-lg">edit_note</span>
               Blog &amp; Articles
             </Link>
+            <Link
+              href="/admin/settings"
+              className="px-4 py-3 rounded font-bold uppercase text-sm flex items-center gap-3 hover:bg-white/10 transition-colors"
+              style={{ fontFamily: "var(--font-headline)" }}
+            >
+              <span className="material-symbols-outlined text-lg">settings</span>
+              Settings
+            </Link>
           </nav>
         </div>
 
