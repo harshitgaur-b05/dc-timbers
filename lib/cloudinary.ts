@@ -16,7 +16,7 @@ export async function uploadToCloudinary(
   folder = "dctimbers/products"
 ): Promise<{ url: string; public_id: string }> {
   const formData = new FormData();
-  formData.append("file", new Blob([buffer]));
+  formData.append("file", new Blob([new Uint8Array(buffer)]));
   formData.append("upload_preset", UPLOAD_PRESET);
   formData.append("folder", folder);
 
