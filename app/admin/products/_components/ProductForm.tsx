@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -34,14 +34,11 @@ interface ProductFormProps {
   mode: "new" | "edit";
 }
 
-const CATEGORIES = [
-  { label: "Gates", value: "Gates", slug: "gates" },
-  { label: "Fencing", value: "Fencing", slug: "fencing" },
-  { label: "Decking", value: "Decking", slug: "decking" },
-  { label: "Timber Products", value: "Timber Products", slug: "timber-products" },
-  { label: "Concrete Products", value: "Concrete Products", slug: "concrete-products" },
-  { label: "Accessories", value: "Accessories", slug: "accessories" },
-];
+interface CategoryOption {
+  label: string;
+  value: string;
+  slug: string;
+}
 
 const STOCK_STATUSES = ["In Stock", "Out of Stock", "Limited Stock", "Made to Order", "Discontinued"];
 
@@ -79,13 +76,26 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const [imagePreview, setImagePreview] = useState<string>(initialData?.image || "");
+  const [categories, setCategories] = useState<CategoryOption[]>([]);
+
+  // Fetch categories on mount
+  useEffect(() => {
+    fetch("/api/categories")
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setCategories(data.map((c: any) => ({ label: c.name, value: c.name, slug: c.slug })));
+        }
+      })
+      .catch(console.error);
+  }, []);
 
   const handleField = (field: keyof ProductFormData, value: string) => {
     setForm((f) => {
       const updated = { ...f, [field]: value };
       // Auto-set categorySlug when category changes
       if (field === "category") {
-        const cat = CATEGORIES.find((c) => c.value === value);
+        const cat = categories.find((c) => c.value === value);
         updated.categorySlug = cat?.slug || value.toLowerCase().replace(/\s+/g, "-");
       }
       return updated;
@@ -208,7 +218,7 @@ export default function ProductForm({ initialData, mode }: ProductFormProps) {
               className="w-full px-4 py-2.5 border border-stone-300 bg-white rounded text-sm focus:outline-none focus:border-amber-600"
             >
               <option value="">— Select Category —</option>
-              {CATEGORIES.map((c) => (
+              {categories.map((c) => (
                 <option key={c.slug} value={c.value}>{c.label}</option>
               ))}
             </select>

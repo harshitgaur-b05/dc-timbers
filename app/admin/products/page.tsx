@@ -26,15 +26,10 @@ interface Product {
   slug: string;
 }
 
-const CATEGORIES = [
-  { label: "All Categories", value: "" },
-  { label: "Gates", value: "gates" },
-  { label: "Fencing", value: "fencing" },
-  { label: "Decking", value: "decking" },
-  { label: "Timber Products", value: "timber-products" },
-  { label: "Concrete Products", value: "concrete-products" },
-  { label: "Accessories", value: "accessories" },
-];
+interface CategoryOption {
+  label: string;
+  value: string;
+}
 
 export default function AdminProductsPage() {
   const router = useRouter();
@@ -42,6 +37,7 @@ export default function AdminProductsPage() {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
+  const [categories, setCategories] = useState<CategoryOption[]>([{ label: "All Categories", value: "" }]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [total, setTotal] = useState(0);
@@ -71,6 +67,18 @@ export default function AdminProductsPage() {
   }, [search, category, page, router]);
 
   useEffect(() => { fetchProducts(); }, [fetchProducts]);
+
+  useEffect(() => {
+    fetch("/api/categories")
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data)) {
+          const opts = data.map((c: any) => ({ label: c.name, value: c.slug }));
+          setCategories([{ label: "All Categories", value: "" }, ...opts]);
+        }
+      })
+      .catch(console.error);
+  }, []);
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -128,7 +136,7 @@ export default function AdminProductsPage() {
           onChange={(e) => { setCategory(e.target.value); setPage(1); }}
           className="px-4 py-2.5 border border-stone-300 bg-white text-sm rounded focus:outline-none focus:border-amber-600"
         >
-          {CATEGORIES.map((c) => (
+          {categories.map((c) => (
             <option key={c.value} value={c.value}>{c.label}</option>
           ))}
         </select>

@@ -67,6 +67,14 @@ export default async function AdminLayout({
               Products
             </Link>
             <Link
+              href="/admin/categories"
+              className="px-4 py-3 rounded font-bold uppercase text-sm flex items-center gap-3 hover:bg-white/10 transition-colors"
+              style={{ fontFamily: "var(--font-headline)" }}
+            >
+              <span className="material-symbols-outlined text-lg">category</span>
+              Categories
+            </Link>
+            <Link
               href="/admin/blog"
               className="px-4 py-3 rounded font-bold uppercase text-sm flex items-center gap-3 hover:bg-white/10 transition-colors"
               style={{ fontFamily: "var(--font-headline)" }}
