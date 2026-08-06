@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface Variant {
   cost_gbp?: number;
@@ -12,6 +13,7 @@ interface ProductCardProps {
   slug: string;
   description?: string;
   subcategory?: string;
+  image?: string;
   variants: Variant[];
 }
 
@@ -20,6 +22,7 @@ export default function ProductCard({
   categorySlug,
   slug,
   description,
+  image,
   variants,
 }: ProductCardProps) {
   const prices = variants
@@ -40,17 +43,29 @@ export default function ProductCard({
         borderColor: "var(--color-primary)",
       }}
     >
-      {/* Image placeholder */}
+      {/* Product Image */}
       <div
-        className="h-48 border-b-2 relative overflow-hidden flex items-center justify-center blueprint-grid"
-        style={{ borderColor: "var(--color-primary)" }}
+        className="h-48 border-b-2 relative overflow-hidden flex items-center justify-center"
+        style={{ borderColor: "var(--color-primary)", backgroundColor: "var(--color-surface)" }}
       >
-        <span
-          className="material-symbols-outlined opacity-20 text-8xl"
-          style={{ color: "var(--color-primary)" }}
-        >
-          forest
-        </span>
+        {image ? (
+          <Image
+            src={image}
+            alt={product_name}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
+        ) : (
+          <div className="blueprint-grid w-full h-full flex items-center justify-center">
+            <span
+              className="material-symbols-outlined opacity-20 text-8xl"
+              style={{ color: "var(--color-primary)" }}
+            >
+              forest
+            </span>
+          </div>
+        )}
         {/* Stock badge */}
         {(hasStock || isMadeToOrder) && (
           <div

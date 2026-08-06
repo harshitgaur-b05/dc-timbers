@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
 import EnquiryForm from "@/components/EnquiryForm";
 import { connectDB } from "@/lib/mongodb";
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {};
 }
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export default async function ProductDetailPage({ params }: Params) {
   const { category, slug } = await params;
@@ -97,9 +98,22 @@ export default async function ProductDetailPage({ params }: Params) {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {/* Image placeholder */}
-          <div className="border-2 h-96 blueprint-grid flex items-center justify-center relative overflow-hidden" style={{ borderColor: "var(--color-primary)", backgroundColor: "var(--color-surface)" }}>
-            <span className="material-symbols-outlined opacity-20" style={{ fontSize: "140px", color: "var(--color-primary)" }}>forest</span>
+          {/* Product Image */}
+          <div className="border-2 h-96 relative overflow-hidden flex items-center justify-center" style={{ borderColor: "var(--color-primary)", backgroundColor: "var(--color-surface)" }}>
+            {product.image ? (
+              <Image
+                src={product.image}
+                alt={product.product_name}
+                fill
+                className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            ) : (
+              <div className="blueprint-grid w-full h-full flex items-center justify-center" style={{ backgroundColor: "var(--color-surface)" }}>
+                <span className="material-symbols-outlined opacity-20" style={{ fontSize: "140px", color: "var(--color-primary)" }}>forest</span>
+              </div>
+            )}
             <div className="absolute top-4 left-4 notched-tag px-4 py-1 text-white font-black text-xs uppercase tracking-widest" style={{ fontFamily: "var(--font-mono)", backgroundColor: "var(--color-primary)" }}>
               Trade Stock
             </div>
@@ -192,7 +206,7 @@ export default async function ProductDetailPage({ params }: Params) {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
               {related.map((p: any) => (
-                <ProductCard key={p._id} product_name={p.product_name} category={p.category} categorySlug={p.categorySlug} slug={p.slug} description={p.description} variants={p.variants || []} />
+                <ProductCard key={p._id} product_name={p.product_name} category={p.category} categorySlug={p.categorySlug} slug={p.slug} description={p.description} image={p.image} variants={p.variants || []} />
               ))}
             </div>
           </div>

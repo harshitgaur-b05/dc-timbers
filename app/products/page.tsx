@@ -134,6 +134,7 @@ export default async function ProductsPage() {
               categorySlug={p.categorySlug}
               slug={p.slug}
               description={p.description}
+              image={p.image}
               variants={p.variants || []}
             />
           ))}
