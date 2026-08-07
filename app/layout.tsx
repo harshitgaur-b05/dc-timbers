@@ -58,7 +58,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen flex flex-col" style={{ fontFamily: "var(--font-body)" }}>
+      <body suppressHydrationWarning className="min-h-screen flex flex-col" style={{ fontFamily: "var(--font-body)" }}>
         <AppShell>{children}</AppShell>
       </body>
     </html>

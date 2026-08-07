@@ -59,7 +59,7 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-3">
             <div className="relative h-9 w-9">
-              <Image src="/logo.jpeg" alt="DCtimbers Logo" fill className="object-contain rounded-xs" />
+              <Image src="/logo.jpeg" alt="DCtimbers Logo" fill sizes="36px" className="object-contain rounded-xs" />
             </div>
             <span
               className="text-2xl font-black uppercase tracking-tight"

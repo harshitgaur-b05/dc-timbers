@@ -293,7 +293,7 @@ export default function Header() {
             <div className="p-4 border-b border-amber-900/50 flex items-center justify-between bg-[#150d08]">
               <div className="flex items-center gap-2.5">
                 <div className="relative h-7 w-7">
-                  <Image src="/logo.jpeg" alt="DCtimbers" fill className="object-contain rounded-xs" />
+                  <Image src="/logo.jpeg" alt="DCtimbers" fill sizes="48px" className="object-contain rounded-xs" />
                 </div>
                 <span
                   className="font-black text-lg text-white uppercase tracking-tight"
