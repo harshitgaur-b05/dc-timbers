@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// Disable buffering globally — operations fail immediately instead of timing out
+// Disable buffering globally — operations fail immediately instead of hanging
 mongoose.set("bufferCommands", false);
 
 const MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI;
@@ -10,10 +10,14 @@ const NO_DB =
 let cached = (global as any).__mongoose;
 if (!cached) cached = (global as any).__mongoose = { conn: null, promise: null };
 
-export async function connectDB(): Promise<typeof mongoose | null> {
-  if (NO_DB) return null;
+export async function connectDB(): Promise<typeof mongoose> {
+  if (NO_DB) {
+    throw new Error("[MongoDB] Missing or unconfigured MONGO_URI / MONGODB_URI");
+  }
 
-  if (cached.conn) return cached.conn;
+  if (cached.conn && mongoose.connection.readyState === 1) {
+    return cached.conn;
+  }
 
   if (!cached.promise) {
     cached.promise = mongoose
@@ -31,6 +35,6 @@ export async function connectDB(): Promise<typeof mongoose | null> {
   } catch (err) {
     cached.promise = null;
     console.error("[MongoDB] Connection failed:", err);
-    return null;
+    throw err;
   }
 }
