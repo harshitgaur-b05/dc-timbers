@@ -116,9 +116,16 @@ const localBusinessJsonLd = {
 };
 
 export default async function HomePage() {
-  await connectDB();
-  const settings = await SiteSettings.findOne().lean();
-  const heroImage = settings?.heroBannerImage || "";
+  let heroImage = "";
+  try {
+    const conn = await connectDB();
+    if (conn) {
+      const settings = await SiteSettings.findOne().lean();
+      heroImage = (settings as any)?.heroBannerImage || "";
+    }
+  } catch (err) {
+    console.error("[HomePage] Error loading site settings:", err);
+  }
 
   return (
     <>
